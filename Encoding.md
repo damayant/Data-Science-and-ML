@@ -29,3 +29,117 @@ There are several ways to encode categorical data in Python, and the choice depe
   The <em><strong>HashingEncoder</strong></em> class from the category_encoders library provides hashing encoding functionality.
 
 These are just a few of the commonly used encoding techniques. The choice of encoding method depends on the specific characteristics of the categorical data, the number of categories, and the requirements of the machine learning algorithm or model being used.
+
+
+Here are some examples of encoding techniques in Python, along with their use cases:
+
+1. **Label Encoding**:
+   Use Case: Encoding ordinal categorical variables with an inherent order.
+
+   ```python
+   import pandas as pd
+   from sklearn.preprocessing import LabelEncoder
+
+   # Create a DataFrame
+   data = pd.DataFrame({'Size': ['Small', 'Medium', 'Large', 'Medium', 'Small']})
+
+   # Create a LabelEncoder object
+   label_encoder = LabelEncoder()
+
+   # Encode the categorical variable
+   data['Size_Encoded'] = label_encoder.fit_transform(data['Size'])
+
+   print(data)
+   ```
+   Output:
+   ```
+       Size  Size_Encoded
+   0   Small             2
+   1  Medium             1
+   2   Large             0
+   3  Medium             1
+   4   Small             2
+   ```
+
+2. **One-Hot Encoding**:
+   Use Case: Encoding nominal categorical variables where no ordinal relationship exists.
+
+   ```python
+   import pandas as pd
+
+   # Create a DataFrame
+   data = pd.DataFrame({'Color': ['Red', 'Green', 'Blue']})
+
+   # Perform one-hot encoding
+   one_hot_encoded = pd.get_dummies(data['Color'], prefix='Color')
+
+   # Concatenate the encoded columns with the original DataFrame
+   data = pd.concat([data, one_hot_encoded], axis=1)
+
+   print(data)
+   ```
+   Output:
+   ```
+      Color  Color_Blue  Color_Green  Color_Red
+   0     Red           0            0          1
+   1   Green           0            1          0
+   2    Blue           1            0          0
+   ```
+
+3. **Binary Encoding**:
+   Use Case: Encoding nominal categorical variables with large cardinality.
+
+   ```python
+   import pandas as pd
+   import category_encoders as ce
+
+   # Create a DataFrame
+   data = pd.DataFrame({'City': ['London', 'Paris', 'Tokyo', 'London', 'Paris']})
+
+   # Create a BinaryEncoder object
+   binary_encoder = ce.BinaryEncoder(cols=['City'])
+
+   # Encode the categorical variable
+   data_encoded = binary_encoder.fit_transform(data)
+
+   print(data_encoded)
+   ```
+   Output:
+   ```
+   City_0  City_1  City_2
+   0       0       0       1
+   1       0       1       0
+   2       1       0       0
+   3       0       0       1
+   4       0       1       0
+   ```
+
+4. **Ordinal Encoding**:
+   Use Case: Encoding categorical variables with an ordinal relationship.
+
+   ```python
+   import pandas as pd
+   from sklearn.preprocessing import OrdinalEncoder
+
+   # Create a DataFrame
+   data = pd.DataFrame({'Size': ['Small', 'Medium', 'Large', 'Medium', 'Small']})
+
+   # Create an OrdinalEncoder object
+   ordinal_encoder = OrdinalEncoder(categories=[['Small', 'Medium', 'Large']])
+
+   # Encode the categorical variable
+   data['Size_Encoded'] = ordinal_encoder.fit_transform(data[['Size']])
+
+   print(data)
+   ```
+   Output:
+   ```
+       Size  Size_Encoded
+   0   Small           0.0
+   1  Medium           1.0
+   2   Large           2.0
+   3  Medium           1.0
+   4   Small           0.0
+   ```
+
+These examples
