@@ -75,4 +75,21 @@ data['column_name'].fillna(method='ffill', inplace=True)
 # Fill missing values with the next valid value (backward fill)
 data['column_name'].fillna(method='bfill', inplace=True)
 ```
+
+
+#### By Mean/Median/Mode values
+```
+# Identify columns with missing values
+columns_with_missing_values = data.columns[data.isnull().any()].tolist()
+
+# Impute missing values with mean
+for column in columns_with_missing_values:
+    data[column].fillna(data[column].mean(), inplace=True)
+
+# Verify the imputed dataset
+print(data.head())
+print('-----------------------')
+#check the new dataset along with the imputed values
+print(data)
+```
 ### Note:  Check this medium link : https://medium.com/analytics-vidhya/handling-missing-data-data-pre-processing-8fbab02c8cb4
