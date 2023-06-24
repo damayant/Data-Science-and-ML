@@ -30,54 +30,69 @@ The choice of missing value handling technique depends on the specific dataset, 
 ## Some examples of missing data handling
 
 
-#### Check for missing data: 
-```
-import pandas as pd
+Handling missing data is a crucial step in data preprocessing. Python provides several libraries and methods to handle missing data effectively. Here are some examples of how to handle missing data using popular libraries like pandas and scikit-learn:
 
-# Read the CSV file
-data = pd.read_csv('your_file.csv')
+1. **Identifying Missing Values**:
+   ```python
+   import pandas as pd
 
-# Check for missing values in the entire DataFrame
-print(data.isnull().sum())
+   # Read the CSV file
+   data = pd.read_csv('your_file.csv')
 
-# Check for missing values in a specific column
-print(data['column_name'].isnull().sum())
-```
-### Method I - Imputing Missing Values:
-```
-import pandas as pd
-from sklearn.impute import SimpleImputer
+   # Check for missing values in the entire DataFrame
+   print(data.isnull().sum())
 
-# Read the CSV file
-data = pd.read_csv('your_file.csv')
+   # Check for missing values in a specific column
+   print(data['column_name'].isnull().sum())
+   ```
 
-# Create a SimpleImputer object
-imputer = SimpleImputer(strategy='mean')
+2. **Dropping Missing Values**:
+   ```python
+   import pandas as pd
 
-# Impute missing values in a specific column
-data['column_name'] = imputer.fit_transform(data[['column_name']])
-```
-#### Filling Missing Values with a Constant:
-```
-import pandas as pd
+   # Drop rows with any missing value in the DataFrame
+   data.dropna(inplace=True)
 
-# Fill missing values in a specific column with a constant
-data['column_name'].fillna(value='constant_value', inplace=True)
-```
+   # Drop rows with any missing value in a specific column
+   data.dropna(subset=['column_name'], inplace=True)
+   ```
 
-#### Filling Missing Values with Forward or Backward Fill:
-```
-import pandas as pd
+3. **Imputing Missing Values**:
+   ```python
+   import pandas as pd
+   from sklearn.impute import SimpleImputer
 
-# Fill missing values with the previous valid value (forward fill)
-data['column_name'].fillna(method='ffill', inplace=True)
+   # Read the CSV file
+   data = pd.read_csv('your_file.csv')
 
-# Fill missing values with the next valid value (backward fill)
-data['column_name'].fillna(method='bfill', inplace=True)
-```
+   # Create a SimpleImputer object
+   imputer = SimpleImputer(strategy='mean')
+
+   # Impute missing values in a specific column
+   data['column_name'] = imputer.fit_transform(data[['column_name']])
+   ```
+
+4. **Filling Missing Values with a Constant**:
+   ```python
+   import pandas as pd
+
+   # Fill missing values in a specific column with a constant
+   data['column_name'].fillna(value='constant_value', inplace=True)
+   ```
+
+5. **Filling Missing Values with Forward or Backward Fill**:
+   ```python
+   import pandas as pd
+
+   # Fill missing values with the previous valid value (forward fill)
+   data['column_name'].fillna(method='ffill', inplace=True)
+
+   # Fill missing values with the next valid value (backward fill)
+   data['column_name'].fillna(method='bfill', inplace=True)
+   ```
 
 
-#### By Mean/Median/Mode values
+6. **By Mean/Median/Mode values**:
 ```
 # Identify columns with missing values
 columns_with_missing_values = data.columns[data.isnull().any()].tolist()
