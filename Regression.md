@@ -157,4 +157,17 @@ It's important to choose an appropriate degree for the polynomial based on the c
      y_pred = regressor.predict(X_test)
      ```
 
-These are just a few examples of regression algorithms and their implementations in Python. Real-life use cases can vary widely, but these examples demonstrate the application of regression algorithms in domains such as house price prediction, bike rental demand, sales revenue prediction, stock price prediction, and demand forecasting. The choice of the regression algorithm depends on the nature of the data, the relationship between the
+### Different use cases of Linear, Multiple Linear and Polynomial Regression
+1. Linear Regression:
+- Use Case: Predicting Housing Prices: Using the size of a house as a single independent variable to predict its price. Linear regression assumes a linear relationship between the independent variable and the target variable.
+- Use Case: Exam Score Prediction: Using the number of study hours as the independent variable to predict exam scores. Linear regression assumes a linear relationship between the independent variable and the target variable.
+
+2. Multiple Linear Regression:
+- Use Case: Sales Prediction: Using multiple independent variables such as advertising expenditure, price, and store location to predict sales. Multiple linear regression captures the combined effects of multiple independent variables on the target variable.
+- Use Case: Employee Salary Prediction: Using variables like years of experience, education level, and job title to predict employee salaries. Multiple linear regression considers multiple factors that can affect the target variable.
+
+3. Polynomial Regression:
+- Use Case: Stock Market Analysis: Modeling the relationship between time and stock prices, which typically exhibit non-linear trends. Polynomial regression captures the non-linear patterns in the relationship between the independent variable and the target variable.
+- Use Case: Environmental Studies: Analyzing the relationship between temperature and pollution levels, which may exhibit non-linear behavior. Polynomial regression can capture the curvilinear relationship between variables.
+
+In summary, Linear Regression is suitable when there is a linear relationship between the independent variable and the target variable. Multiple Linear Regression is used when multiple independent variables contribute to the prediction. Polynomial Regression is used when the relationship between the independent variable(s) and the target variable is non-linear and can be better represented by a polynomial equation. The choice of regression technique depends on the specific problem and the nature of the relationship between variables.
