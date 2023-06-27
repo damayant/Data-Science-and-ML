@@ -1,10 +1,10 @@
-1. Supervised Learning:
+ # Supervised Learning:
 Supervised learning involves training a model using labeled data, where the input features and their corresponding target values are provided. 
 The goal is to learn a mapping function that can predict the target variable for new, unseen data points.
 
 
 
-#### b. Types of Supervised Learning
+### Types of Supervised Learning
 Supervised learning, as a subfield of machine learning, can be further categorized into several types based on the nature of the target variable and the learning task. Here are some common types of supervised learning:
 
 1. **Classification**: Classification is a type of supervised learning where the target variable is categorical or discrete, and the goal is to classify input data into predefined classes or categories. Algorithms learn from labeled data to predict the class or category of unseen instances.
