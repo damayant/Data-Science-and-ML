@@ -1,6 +1,6 @@
 # Types Of Classification
 
-In supervised learning, classification is a type of learning where the goal is to assign input instances to predefined categories or classes. There are various types of classification algorithms, each suited for different types of data and problem domains. Here are some commonly used classification algorithms along with real-life use cases and Python code implementations:
+In supervised learning, classification is a type of learning where the goal is to assign input instances to predefined categories or classes.Unlike regression where you predict a continuous number, you use classification to predict a category.  There are various types of classification algorithms, each suited for different types of data and problem domains. Here are some commonly used classification algorithms along with real-life use cases and Python code implementations:
 
 1. **Logistic Regression**:
    - Use Case: Email Spam Detection
