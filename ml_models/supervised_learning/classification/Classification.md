@@ -3,8 +3,10 @@
 In supervised learning, classification is a type of learning where the goal is to assign input instances to predefined categories or classes.Unlike regression where you predict a continuous number, you use classification to predict a category.  There are various types of classification algorithms, each suited for different types of data and problem domains. Here are some commonly used classification algorithms along with real-life use cases and Python code implementations:
 
 1. **Logistic Regression**:
-   - Use Case: Email Spam Detection
-   - Description: Logistic Regression is used to model the probability of an instance belonging to a particular class. It is a widely used algorithm for binary classification tasks.
+  
+   - Description: Logistic Regression is used to model the probability of an instance belonging to a particular class. It is a widely used algorithm for binary classification tasks. ie
+     <strong> Predict a categorical dependant variable from a number of independant variables </strong> 
+   - Use Case: will somebody purchase your company's insurance (say based on age) 
    - Python Implementation:
 
      ```python
@@ -20,7 +22,7 @@ In supervised learning, classification is a type of learning where the goal is t
      y_pred = classifier.predict(X_test)
      ```
 
-2. **Decision Trees**:
+3. **Decision Trees**:
    - Use Case: Customer Churn Prediction
    - Description: Decision Trees partition the input space based on feature values and make decisions based on a tree-like flowchart structure.
    - Python Implementation:
@@ -38,7 +40,7 @@ In supervised learning, classification is a type of learning where the goal is t
      y_pred = classifier.predict(X_test)
      ```
 
-3. **Random Forests**:
+4. **Random Forests**:
    - Use Case: Image Classification
    - Description: Random Forests combine multiple decision trees to create an ensemble model. Each tree is trained on a random subset of features and contributes to the final prediction.
    - Python Implementation:
@@ -56,7 +58,7 @@ In supervised learning, classification is a type of learning where the goal is t
      y_pred = classifier.predict(X_test)
      ```
 
-4. **Support Vector Machines (SVM)**:
+5. **Support Vector Machines (SVM)**:
    - Use Case: Text Classification
    - Description: SVM is a powerful algorithm for both binary and multi-class classification. It finds an optimal hyperplane that separates instances of different classes with the largest margin.
    - Python Implementation:
@@ -75,7 +77,7 @@ In supervised learning, classification is a type of learning where the goal is t
      ```
    ### There are different other types of SVMs : [Check this link for more details](https://github.com/damayant/Data-Science-and-ML/blob/master/ml_models/supervised_learning/classification/svms.md)
 
-5. **K-Nearest Neighbors (KNN)**:
+6. **K-Nearest Neighbors (KNN)**:
    - Use Case: Handwritten Digit Recognition
    - Description: KNN is a non-parametric algorithm that classifies instances based on their similarity to k nearest neighbors in the feature space.
    - Python Implementation:
