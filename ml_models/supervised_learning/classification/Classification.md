@@ -73,6 +73,7 @@ In supervised learning, classification is a type of learning where the goal is t
      # Make predictions on new data
      y_pred = classifier.predict(X_test)
      ```
+   ### There are different other types of SVMs : [Check this link for more details](https://github.com/damayant/Data-Science-and-ML/blob/master/ml_models/supervised_learning/classification/svms.md)
 
 5. **K-Nearest Neighbors (KNN)**:
    - Use Case: Handwritten Digit Recognition
