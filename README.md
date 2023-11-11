@@ -1,1 +1,1 @@
-# Data-Science
+# Coursework on Machine Learning and Data Science
