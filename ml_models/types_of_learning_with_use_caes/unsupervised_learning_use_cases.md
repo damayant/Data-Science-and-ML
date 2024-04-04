@@ -1,7 +1,7 @@
 #### 2. Unsupervised Learning Use Cases
 Unsupervised learning is a powerful approach in machine learning that deals with unlabeled data, allowing for the discovery of patterns, structures, or relationships without explicit guidance from predefined target variables. Here are some real-life examples of unsupervised learning applications:
 
-1. **Clustering and Customer Segmentation**: Unsupervised learning algorithms can group similar data points together to identify distinct segments or clusters. This can be useful in customer segmentation to understand different groups of customers based on their attributes, behaviors, or preferences, enabling targeted marketing strategies.
+1. **Clustering and Customer Segmentation**: <mark>Unsupervised learning algorithms can group similar data points together to identify distinct segments or clusters. This can be useful in customer segmentation to understand different groups of customers based on their attributes, behaviors, or preferences, enabling targeted marketing strategies.</mark>
 
    Example: Segmenting online shoppers based on their browsing and purchasing behavior to tailor personalized recommendations and promotions.
 
